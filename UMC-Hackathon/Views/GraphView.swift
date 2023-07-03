@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Hue
 
 class GraphView: UIView {
     
@@ -35,7 +36,8 @@ class GraphView: UIView {
         innerRingPath.stroke()
         
         let outerRingCoverPath = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2 * CGFloat.pi * outerRingPercentage, clockwise: true)
-        UIColor.systemGreen.setStroke()
+        UIColor(red: 0.69, green: 0.32, blue: 0.87, alpha: 1.00).setStroke()
+        UIColor.systemCyan.setStroke()
         outerRingCoverPath.lineWidth = 20
         outerRingCoverPath.stroke()
     }
@@ -61,3 +63,4 @@ class GraphView: UIView {
     }
     
 }
+

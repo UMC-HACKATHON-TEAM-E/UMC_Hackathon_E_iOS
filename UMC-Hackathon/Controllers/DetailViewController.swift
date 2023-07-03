@@ -14,16 +14,79 @@ class DetailViewController: UIViewController {
     
 
     @IBOutlet weak var bottomView: UIView!
+    
+    //그래프 들어가는 뷰
     @IBOutlet weak var middleView: UIView!
     
+    //그래프 위
     @IBOutlet weak var titleFont: UILabel!
+    
+    let graphView = GraphView()
+    
+    //그래프
+    private let stackView: UIStackView = {
+            let sv = UIStackView()
+            sv.axis = .vertical
+            sv.spacing = 5
+            sv.distribution = .fill
+            sv.alignment = .fill
+            return sv
+        }()
+        
+        private let percentLabel: UILabel = {
+            let label = UILabel()
+            label.text = "88%"
+            label.font = UIFont.systemFont(ofSize:30, weight: .bold)
+            label.textAlignment = .center
+            return label
+        }()
+        
+        private let divLabel: UILabel = {
+            let label = UILabel()
+            label.text = "88/100"
+            label.font = UIFont.systemFont(ofSize: 11, weight: .light)
+            label.textColor = .gray
+            label.textAlignment = .center
+            return label
+        }()
+    
+    
+    
+    func configureGraph(percent: Double) {
+            
+            graphView.backgroundColor = .clear
+            
+            graphView.setOuterRingColor(.systemGray6)
+            //graphView.setInnerRingColor(.systemBlue)
+            graphView.setOuterRingPercentage(percent)
+            //graphView.setInnerRingPercentage(0.8)
+            
+            middleView.addSubview(graphView)
+            graphView.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                graphView.centerXAnchor.constraint(equalTo: middleView.centerXAnchor),
+                graphView.centerYAnchor.constraint(equalTo: middleView.centerYAnchor),
+                graphView.widthAnchor.constraint(equalTo: middleView.widthAnchor),
+                graphView.heightAnchor.constraint(equalTo: middleView.heightAnchor)
+            ])
+            
+            stackView.addArrangedSubview(percentLabel)
+            stackView.addArrangedSubview(divLabel)
+            
+            graphView.addSubview(stackView)
+            
+            stackView.translatesAutoresizingMaskIntoConstraints = false
+            percentLabel.translatesAutoresizingMaskIntoConstraints = false
+            divLabel.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                stackView.centerXAnchor.constraint(equalTo: graphView.centerXAnchor),
+                stackView.centerYAnchor.constraint(equalTo: graphView.centerYAnchor)
+            ])
+        }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-     
-        
         
         self.view.setGradient(color1: UIColor(red: 0.69, green: 0.32, blue: 0.87, alpha: 1.00), color2: UIColor(red: 0.00, green: 0.48, blue: 1.00, alpha: 1.00))
         
@@ -40,6 +103,12 @@ class DetailViewController: UIViewController {
         self.view.bringSubviewToFront(bottomView)
         self.view.bringSubviewToFront(middleView)
         self.view.bringSubviewToFront(titleFont)
+        
+        configureGraph(percent: 0.8)
+        
+        
+        
+       
     }
 
 
