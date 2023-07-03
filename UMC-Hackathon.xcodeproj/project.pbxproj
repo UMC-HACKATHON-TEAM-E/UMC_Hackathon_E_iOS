@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48FB4E3B2A52E54F005A4A3F /* Hue in Frameworks */ = {isa = PBXBuildFile; productRef = 48FB4E3A2A52E54F005A4A3F /* Hue */; };
 		576668302A52B30100A8115C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766682F2A52B30100A8115C /* AppDelegate.swift */; };
 		576668322A52B30100A8115C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576668312A52B30100A8115C /* SceneDelegate.swift */; };
 		576668342A52B30100A8115C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576668332A52B30100A8115C /* HomeViewController.swift */; };
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48FB4E3B2A52E54F005A4A3F /* Hue in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +123,9 @@
 			dependencies = (
 			);
 			name = "UMC-Hackathon";
+			packageProductDependencies = (
+				48FB4E3A2A52E54F005A4A3F /* Hue */,
+			);
 			productName = "UMC-Hackathon";
 			productReference = 5766682C2A52B30100A8115C /* UMC-Hackathon.app */;
 			productType = "com.apple.product-type.application";
@@ -149,6 +154,9 @@
 				Base,
 			);
 			mainGroup = 576668232A52B30100A8115C;
+			packageReferences = (
+				48FB4E392A52E54F005A4A3F /* XCRemoteSwiftPackageReference "Hue" */,
+			);
 			productRefGroup = 5766682D2A52B30100A8115C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -404,6 +412,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		48FB4E392A52E54F005A4A3F /* XCRemoteSwiftPackageReference "Hue" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zenangst/Hue";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		48FB4E3A2A52E54F005A4A3F /* Hue */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48FB4E392A52E54F005A4A3F /* XCRemoteSwiftPackageReference "Hue" */;
+			productName = Hue;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 576668242A52B30100A8115C /* Project object */;
 }
