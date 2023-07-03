@@ -8,14 +8,4 @@
 import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var first: UIView!
-    
-    @IBOutlet weak var second: UIView!
-    
-    @IBOutlet weak var third: UIView!
-    
-    @IBOutlet weak var fourth: UIView!
-    
-    @IBOutlet weak var fifth: UIView!
 }
