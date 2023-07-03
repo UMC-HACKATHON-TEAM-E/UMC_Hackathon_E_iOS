@@ -136,24 +136,28 @@ class DetailViewController: UIViewController {
         self.view.bringSubviewToFront(secondTitle)
         self.view.bringSubviewToFront(InformationVIew)
         
-        configureGraph(percent: percentParameter)
+        configureGraph(percent: percentParameter/100)
         
-        var left = goal.count
-        var right = goal.lastDays
-        var result = (left) / (right ?? 1)
+        var left = Double(goal.count)
+        var right = Double(goal.lastDays!)
         
-        var first:Int = Int(Firstprobability.text ?? "") ?? 0
-        var second:Int = Int(secondProbability.text ?? "") ?? 0
-        
-        var result2 = first / second
-        
-        
-        divLabel.text = "\(left)/\(right!)"
+        var resultPlaying = Int(((left) / (right)) * 100)
         
         
         
-        Firstprobability.text = String(result2) + "%"
-        secondProbability.text = String(result) + "%"
+        var first:Int = Int((currentNum.text?.split(separator: "%")[0])!) ?? 0
+        var second:Int = Int((habitNum.text?.split(separator: "%")[0])!) ?? 0
+        
+        var result2 = Double(first) / Double(second)
+        
+        
+        divLabel.text = "\(Int(left))/\(Int(right))"
+        
+        
+        
+        Firstprobability.text = String(Int(result2 * 100)) + "%"
+        
+        secondProbability.text = String(resultPlaying) + "%"
         
        
     }
