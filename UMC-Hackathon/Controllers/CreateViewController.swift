@@ -9,6 +9,16 @@ import UIKit
 
 class CreateViewController: UIViewController {
     
+    @IBOutlet weak var goalTitleTextField: UITextField!
+    @IBOutlet weak var goalActivateTextField: UITextField!
+    
+    @IBOutlet weak var periodTextField: UITextField!
+    
+    @IBOutlet weak var countTextField: UITextField!
+    @IBOutlet weak var habitPercentTextField: UITextField!
+    
+    @IBOutlet weak var promiseTextField: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,15 +27,29 @@ class CreateViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func createButtonTapped(_ sender: UIButton) {
+        
+        print(goalTitleTextField.text)
+        print(goalActivateTextField.text)
+        print(periodTextField.text)
+        print(countTextField.text)
+        print(habitPercentTextField.text)
+        print(promiseTextField.text)
+        
+        
+        navigationController?.popViewController(animated: true)
+    }
     
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeCollectionViewCellDelegate: AnyObject {
-    func okAlertButtonTapped()
+    func okAlertButtonTapped(_ alertController: UIAlertController)
 }
 
 class HomeCollectionViewCell: UICollectionViewCell {
@@ -24,6 +24,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
     weak var delegate: HomeCollectionViewCellDelegate?
     
     private let graphView = GraphView()
+    
+    var checked: Bool = false
     
     private let stackView: UIStackView = {
         let sv = UIStackView()
@@ -97,7 +99,26 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     @IBAction func confirmButtonTapped(_ sender: UIButton) {
         print("tap")
-        delegate?.okAlertButtonTapped()
+        
+        let title = "근육몬 되기 대작전 인증"
+        let message = "헬스장 가기를 이루셨나요?"
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "네", style: .default) { _ in
+            print("네")
+            self.checked = true
+        }
+        
+        let cancel = UIAlertAction(title: "아니오", style: .cancel) { _ in
+            print("아니오")
+            self.checked = false
+        }
+        
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        
+        
+        delegate?.okAlertButtonTapped(alert)
     }
     
 }

@@ -62,22 +62,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 }
 
 extension HomeViewController: HomeCollectionViewCellDelegate {
-    func okAlertButtonTapped() {
-        let title = "근육몬 되기 대작전 인증"
-        let message = "헬스장 가기를 이루셨나요?"
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    func okAlertButtonTapped(_ alertController: UIAlertController) {
         
-        let ok = UIAlertAction(title: "네", style: .default) { _ in
-            print("네")
-        }
         
-        let cancel = UIAlertAction(title: "아니오", style: .cancel) { _ in
-            print("아니오")
-        }
-        
-        alert.addAction(ok)
-        alert.addAction(cancel)
-        
-        present(alert, animated: true)
+        present(alertController, animated: true)
     }
 }
