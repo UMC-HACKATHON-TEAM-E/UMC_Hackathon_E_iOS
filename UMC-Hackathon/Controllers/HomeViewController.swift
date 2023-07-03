@@ -13,13 +13,22 @@ class HomeViewController: UIViewController {
     
     let flowLayout = UICollectionViewFlowLayout()
     
-    let data: [Int] = []
+    var goalList: [Goal] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
         setupCollectionView()
         setupNavigationBar()
+        
+//        GoalService.shared.requestGoalList(userId: 1) { goalList in
+//            self.goalList = goalList
+//            DispatchQueue.main.async {
+//                self.collectionView.reloadData()
+//            }
+//        }
     }
 
     private func setupCollectionView() {

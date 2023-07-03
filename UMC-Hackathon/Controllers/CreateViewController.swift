@@ -48,8 +48,19 @@ class CreateViewController: UIViewController {
         print(habitPercentTextField.text)
         print(promiseTextField.text)
         
+        guard let title = goalTitleTextField.text else { return }
+        guard let goalCount = Int(countTextField.text ?? "0") else { return }
+        guard let period = Int(periodTextField.text ?? "0") else { return }
         
-        navigationController?.popViewController(animated: true)
+        let newGoal = NewGoal(userId: 1, title: title, goalCount: goalCount, period: period)
+        
+        GoalService.shared.createNewGoal(newGoal: newGoal) {
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+        
+        
     }
     
 }
