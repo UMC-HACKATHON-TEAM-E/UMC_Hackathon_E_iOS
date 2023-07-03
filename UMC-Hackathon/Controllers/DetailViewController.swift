@@ -11,8 +11,11 @@ import UIKit
 class DetailViewController: UIViewController {
     
     
+    @IBOutlet weak var habitNum: UILabel!
+    @IBOutlet weak var currentNum: UILabel!
+    @IBOutlet weak var Firstprobability: UILabel!
+    @IBOutlet weak var secondProbability: UILabel!
     
-
     @IBOutlet weak var bottomView: UIView!
     
     //그래프 들어가는 뷰
@@ -28,14 +31,21 @@ class DetailViewController: UIViewController {
     
     var percentParameter:Double = 0.0
     
+    var left:Int = 0
+    var right:Int = 0
+    
+    var goal: Goal!
+    
     var percentValue:Double?{
         didSet{
             if let value = percentValue{
-                percentParameter = value/100
-                percentLabel.text = String(format: "%.2f",value) + "%"
+                percentParameter = value
+                percentLabel.text = String(format: "%.0f",value) + "%"
             }
         }
     }
+    
+    
     
     let graphView = GraphView()
     
@@ -58,7 +68,6 @@ class DetailViewController: UIViewController {
         
         private let divLabel: UILabel = {
             let label = UILabel()
-            label.text = "88/100"
             label.font = UIFont.systemFont(ofSize: 11, weight: .light)
             label.textColor = .gray
             label.textAlignment = .center
@@ -127,9 +136,28 @@ class DetailViewController: UIViewController {
         self.view.bringSubviewToFront(secondTitle)
         self.view.bringSubviewToFront(InformationVIew)
         
-        configureGraph(percent: percentParameter)
+        configureGraph(percent: percentParameter/100)
+        
+        var left = Double(goal.count)
+        var right = Double(goal.lastDays!)
+        
+        var resultPlaying = Int(((left) / (right)) * 100)
         
         
+        
+        var first:Int = Int((currentNum.text?.split(separator: "%")[0])!) ?? 0
+        var second:Int = Int((habitNum.text?.split(separator: "%")[0])!) ?? 0
+        
+        var result2 = Double(first) / Double(second)
+        
+        
+        divLabel.text = "\(Int(left))/\(Int(right))"
+        
+        
+        
+        Firstprobability.text = String(Int(result2 * 100)) + "%"
+        
+        secondProbability.text = String(resultPlaying) + "%"
         
        
     }

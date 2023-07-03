@@ -26,6 +26,13 @@ class CreateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        periodTextField.layer.cornerRadius = 10
+        countTextField.layer.cornerRadius = 10
+        habitPercentTextField.layer.cornerRadius = 10
+        detailSettingView.layer.cornerRadius = 10
+        promiseTextField.layer.cornerRadius = 10
+        goalView.layer.cornerRadius = 10
         // Do any additional setup after loading the view
         setupUI()
         

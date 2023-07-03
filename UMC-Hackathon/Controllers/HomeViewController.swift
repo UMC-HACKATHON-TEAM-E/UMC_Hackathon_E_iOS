@@ -99,9 +99,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     //눌렀을 때 화면 전환
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let goal = goalList[indexPath.item]
-        let percent = (Double(goal.count) / Double(goal.goalCount))*100
+        let percent = (Double(goal.count) / Double(goal.lastDays ?? 1))*100
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         vc.percentValue = percent
+        vc.goal = goal
         navigationController?.pushViewController(vc, animated: true)
     }
 }
