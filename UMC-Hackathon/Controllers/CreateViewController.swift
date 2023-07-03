@@ -29,6 +29,8 @@ class CreateViewController: UIViewController {
         // Do any additional setup after loading the view
         setupUI()
         
+        periodTextField.delegate = self
+        countTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,16 +63,39 @@ class CreateViewController: UIViewController {
         guard let title = goalTitleTextField.text else { return }
         guard let goalCount = Int(countTextField.text ?? "0") else { return }
         guard let period = Int(periodTextField.text ?? "0") else { return }
+        guard let promise = promiseTextField.text else { return }
+  
         
-        let newGoal = NewGoal(userId: 1, title: title, goalCount: goalCount, period: period)
+        let goal = Goal(goalID: 3, title: title, startDate: "2023.07.04", endDate: "", goalCount: goalCount, user: User(id: 1, email: "", password: "", name: ""), period: period, count: 0, promise: promise, lastDays: 1)
         
-        GoalService.shared.createNewGoal(newGoal: newGoal) {
-            DispatchQueue.main.async {
-                self.navigationController?.popViewController(animated: true)
+        guard let vcStack = self.navigationController?.viewControllers else { return }
+        for view in vcStack {
+            if let vc = view as? HomeViewController {
+                vc.goalList.insert(goal, at: 0)
+                vc.collectionView.reloadData()
+                self.navigationController?.popToViewController(vc, animated: true)
             }
         }
+//        let newGoal = NewGoal(userId: 1, title: title, goalCount: goalCount, period: period)
+//
+//        GoalService.shared.createNewGoal(newGoal: newGoal) {
+//            DispatchQueue.main.async {
+//                self.navigationController?.popViewController(animated: true)
+//            }
+//        }
         
         
     }
     
+}
+
+extension CreateViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if periodTextField.text != "" && countTextField.text != "" {
+            print("dd")
+            let period = Double(periodTextField.text!)!
+            let count = Double(countTextField.text!)!
+            habitPercentTextField.text = "\(Int((count / period) * 100))"
+        }
+    }
 }
