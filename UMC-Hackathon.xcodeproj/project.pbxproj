@@ -14,6 +14,7 @@
 		576668392A52B30100A8115C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 576668382A52B30100A8115C /* Assets.xcassets */; };
 		5766683C2A52B30100A8115C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5766683A2A52B30100A8115C /* LaunchScreen.storyboard */; };
 		576668492A52DA6600A8115C /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576668482A52DA6600A8115C /* HomeCollectionViewCell.swift */; };
+		5766684D2A52E32400A8115C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766684C2A52E32400A8115C /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5766683B2A52B30100A8115C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5766683D2A52B30100A8115C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		576668482A52DA6600A8115C /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		5766684C2A52E32400A8115C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				576668332A52B30100A8115C /* HomeViewController.swift */,
+				5766684C2A52E32400A8115C /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			files = (
 				576668342A52B30100A8115C /* HomeViewController.swift in Sources */,
 				576668302A52B30100A8115C /* AppDelegate.swift in Sources */,
+				5766684D2A52E32400A8115C /* DetailViewController.swift in Sources */,
 				576668322A52B30100A8115C /* SceneDelegate.swift in Sources */,
 				576668492A52DA6600A8115C /* HomeCollectionViewCell.swift in Sources */,
 			);
