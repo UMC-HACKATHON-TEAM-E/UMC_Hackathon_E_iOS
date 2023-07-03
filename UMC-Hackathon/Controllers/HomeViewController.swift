@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
         collectionView.dataSource = self
         
         flowLayout.scrollDirection = .vertical
-        flowLayout.itemSize = CGSize(width: view.frame.width, height: 270)
+        flowLayout.itemSize = CGSize(width: view.frame.width, height: 240)
         collectionView.collectionViewLayout = flowLayout
     }
 
@@ -40,7 +40,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
         //cell.customizeChart()
-        cell.configureUI(percent: 0.5)
+        cell.configureGraph(percent: 0.5)
+        cell.configureUI()
         return cell
     }
     

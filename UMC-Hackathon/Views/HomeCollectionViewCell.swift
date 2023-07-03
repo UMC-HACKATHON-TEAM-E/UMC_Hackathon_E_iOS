@@ -14,6 +14,9 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var predictPercent: UILabel!
     
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var confirmButton: UIButton!
+    
     private let graphView = GraphView()
     
     private let stackView: UIStackView = {
@@ -46,13 +49,19 @@ class HomeCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func configureUI(percent: Double) {
+    func configureUI() {
         containerView.layer.cornerRadius = 40
+        bottomView.layer.cornerRadius = 15
+        confirmButton.layer.cornerRadius = 15
+    }
+    
+    func configureGraph(percent: Double) {
+        
         
         pieChartView.backgroundColor = .clear
         graphView.backgroundColor = .clear
         
-        graphView.setOuterRingColor(.lightGray)
+        graphView.setOuterRingColor(.systemGray6)
         //graphView.setInnerRingColor(.systemBlue)
         graphView.setOuterRingPercentage(percent)
         //graphView.setInnerRingPercentage(0.8)
@@ -79,4 +88,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
             stackView.centerYAnchor.constraint(equalTo: graphView.centerYAnchor)
         ])
     }
+    
+    @IBAction func confirmButtonTapped(_ sender: UIButton) {
+    }
+    
 }
