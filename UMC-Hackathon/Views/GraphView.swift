@@ -52,7 +52,7 @@ class GraphView: UIView {
         let center = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
         let radius = min(bounds.width, bounds.height) / 2 - 10
         
-        let outerRingPath = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        let outerRingPath = UIBezierPath(arcCenter: center, radius: radius - 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         outerRingColor.setStroke()
         outerRingPath.lineWidth = 20
         outerRingPath.stroke()
@@ -71,8 +71,8 @@ class GraphView: UIView {
         shapeMask.fillRule = .evenOdd
         
         let gradientLayer = CAGradientLayer()
-       // gradientLayer.frame = CGRect(x: 0, y: 10, width: self.bounds.width, height: self.bounds.height)
-        gradientLayer.frame = self.bounds
+        gradientLayer.frame = CGRect(x: 0, y: 1, width: self.bounds.width, height: self.bounds.height)
+      //  gradientLayer.frame = self.bounds
         gradientLayer.colors = [UIColor(red: 0.00, green: 0.48, blue: 1.00, alpha: 1.00).cgColor, UIColor(red: 0.69, green: 0.32, blue: 0.87, alpha: 1.00).cgColor]
 
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
