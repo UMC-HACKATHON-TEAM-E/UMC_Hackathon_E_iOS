@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeCollectionViewCellDelegate: AnyObject {
-    func okAlertButtonTapped(_ alertController: UIAlertController)
+    func okAlertButtonTapped(_ alertController: UIAlertController, indexPath: IndexPath)
 }
 
 class HomeCollectionViewCell: UICollectionViewCell {
@@ -17,15 +17,21 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var pieChartView: UIView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var predictPercent: UILabel!
+    @IBOutlet weak var possibilityPercent: UILabel!
+    @IBOutlet weak var promise: UILabel!
     
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var confirmButton: UIButton!
     
-    weak var delegate: HomeCollectionViewCellDelegate?
+    weak var delegate: HomeViewController?
     
     private let graphView = GraphView()
     
+    var indexPath: IndexPath?
+    
     var checked: Bool = false
+    
+    var goal: Goal?
     
     private let stackView: UIStackView = {
         let sv = UIStackView()
@@ -55,6 +61,12 @@ class HomeCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
+    }
+    
+    func setData(goal: Goal) {
+        self.goal = goal
+        title.text = goal.title
+        divLabel.text = "\(goal.count)/\(goal.goalCount)"
     }
     
     func configureUI() {
@@ -101,30 +113,39 @@ class HomeCollectionViewCell: UICollectionViewCell {
             stackView.centerXAnchor.constraint(equalTo: graphView.centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: graphView.centerYAnchor)
         ])
+        
+        percentLabel.text = "\(round(percent * 100 * 100) / 100)%"
     }
     
     @IBAction func confirmButtonTapped(_ sender: UIButton) {
-        print("tap")
+        var alert: UIAlertController
         
-        let title = "근육몬 되기 대작전 인증"
-        let message = "헬스장 가기를 이루셨나요?"
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        let ok = UIAlertAction(title: "네", style: .default) { _ in
-            print("네")
-            self.checked = true
+        if checked {
+            alert = UIAlertController(title: goal?.title, message: "오늘 이미 달성한 목표입니다.", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "확인", style: .default)
+            
+            alert.addAction(ok)
+        } else {
+            let title = goal?.title
+            let message = "오늘의 목표를 달성하셨나요?"
+            alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            
+            let ok = UIAlertAction(title: "네", style: .default) { _ in
+                print("네")
+                self.checked = true
+                self.delegate?.goalList[self.indexPath!.item].count += 1
+                self.delegate?.collectionView.reloadData()
+            }
+            
+            let cancel = UIAlertAction(title: "아니오", style: .cancel) { _ in
+                print("아니오")
+            }
+            
+            alert.addAction(ok)
+            alert.addAction(cancel)
+            
         }
-        
-        let cancel = UIAlertAction(title: "아니오", style: .cancel) { _ in
-            print("아니오")
-            self.checked = false
-        }
-        
-        alert.addAction(ok)
-        alert.addAction(cancel)
-        
-        
-        delegate?.okAlertButtonTapped(alert)
+        delegate?.okAlertButtonTapped(alert, indexPath: self.indexPath!)
     }
     
 }

@@ -13,7 +13,10 @@ class HomeViewController: UIViewController {
     
     let flowLayout = UICollectionViewFlowLayout()
     
-    var goalList: [Goal] = []
+    var goalList: [Goal] = [
+        Goal(goalID: 1, title: "백준 골드 가보자!", startDate: "", endDate: "", goalCount: 150, user: User(id: 1, email: "", password: "", name: ""), period: 200, count: 0, possibility: 0, promise: "알고리즘 고수가 되기까지 천천히 시작해보자!"),
+        Goal(goalID: 1, title: "내 몸을 건강하게", startDate: "", endDate: "", goalCount: 100, user: User(id: 1, email: "", password: "", name: ""), period: 100, count: 34, possibility: 100, promise: "하루도 빠지지 말고 끝까지 해내보자")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,15 +55,20 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return goalList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
         //cell.customizeChart()
-        cell.configureGraph(percent: 0.5)
+        let goal = goalList[indexPath.item]
+        cell.setData(goal: goal)
+        cell.configureGraph(percent: Double(goal.count) / Double(goal.goalCount))
         cell.configureUI()
+        cell.possibilityPercent.text = "\(goal.possibility ?? 0)%"
+        cell.promise.text = goal.promise ?? ""
         cell.delegate = self
+        cell.indexPath = indexPath
         return cell
     }
     
@@ -71,8 +79,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 }
 
 extension HomeViewController: HomeCollectionViewCellDelegate {
-    func okAlertButtonTapped(_ alertController: UIAlertController) {
-        
+    func okAlertButtonTapped(_ alertController: UIAlertController, indexPath: IndexPath) {
         
         present(alertController, animated: true)
     }

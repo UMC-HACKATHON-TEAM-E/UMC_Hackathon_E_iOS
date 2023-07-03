@@ -16,11 +16,13 @@ struct GoalList: Codable {
 }
 
 struct Goal: Codable {
-    let goalID: Int
-    let title, startDate, endDate: String
-    let goalCount: Int  // 목표 횟수
-    let user: User
-    let period, count: Int  // 주기, 현재까지 한 횟수
+    var goalID: Int
+    var title, startDate, endDate: String
+    var goalCount: Int  // 목표 횟수
+    var user: User
+    var period, count: Int  // 주기, 현재까지 한 횟수
+    var possibility: Int?
+    var promise: String?
 
     enum CodingKeys: String, CodingKey {
         case goalID = "goalId"

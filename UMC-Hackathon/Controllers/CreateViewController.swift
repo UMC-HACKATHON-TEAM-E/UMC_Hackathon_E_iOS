@@ -9,8 +9,12 @@ import UIKit
 
 class CreateViewController: UIViewController {
     
+    @IBOutlet weak var goalView: UIView!
     @IBOutlet weak var goalTitleTextField: UITextField!
     @IBOutlet weak var goalActivateTextField: UITextField!
+    
+    
+    @IBOutlet weak var detailSettingView: UIView!
     
     @IBOutlet weak var periodTextField: UITextField!
     
@@ -23,7 +27,7 @@ class CreateViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view
-        
+        setupUI()
         
     }
     
@@ -33,6 +37,12 @@ class CreateViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
+    }
+    
+    func setupUI() {
+        goalView.layer.cornerRadius = 15
+        detailSettingView.layer.cornerRadius = 15
+        promiseTextField.layer.cornerRadius = 15
     }
     
     @IBAction func cancelButtonTapped(_ sender: UIButton) {
