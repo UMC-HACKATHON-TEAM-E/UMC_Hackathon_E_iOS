@@ -26,6 +26,17 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var InformationVIew: UIView!
     
+    var percentParameter:Double = 0.0
+    
+    var percentValue:Double?{
+        didSet{
+            if let value = percentValue{
+                percentParameter = value/100
+                percentLabel.text = String(format: "%.2f",value) + "%"
+            }
+        }
+    }
+    
     let graphView = GraphView()
     
     //그래프
@@ -38,9 +49,8 @@ class DetailViewController: UIViewController {
             return sv
         }()
         
-        private let percentLabel: UILabel = {
+            let percentLabel: UILabel = {
             let label = UILabel()
-            label.text = "88%"
             label.font = UIFont.systemFont(ofSize:30, weight: .bold)
             label.textAlignment = .center
             return label
@@ -117,7 +127,7 @@ class DetailViewController: UIViewController {
         self.view.bringSubviewToFront(secondTitle)
         self.view.bringSubviewToFront(InformationVIew)
         
-        configureGraph(percent: 0.8)
+        configureGraph(percent: percentParameter)
         
         
         

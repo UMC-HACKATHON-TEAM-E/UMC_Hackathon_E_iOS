@@ -13,6 +13,7 @@ protocol HomeCollectionViewCellDelegate: AnyObject {
 
 class HomeCollectionViewCell: UICollectionViewCell {
     
+    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var pieChartView: UIView!
     @IBOutlet weak var title: UILabel!
@@ -45,7 +46,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     private let percentLabel: UILabel = {
         let label = UILabel()
         label.text = "88%"
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         label.textAlignment = .center
         return label
     }()
@@ -53,7 +54,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     private let divLabel: UILabel = {
         let label = UILabel()
         label.text = "88/100"
-        label.font = UIFont.systemFont(ofSize: 13, weight: .light)
+        label.font = UIFont.systemFont(ofSize: 12, weight: .light)
         label.textAlignment = .center
         return label
     }()

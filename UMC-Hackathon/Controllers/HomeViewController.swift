@@ -11,6 +11,8 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var sendData:Double = 0.0
+    
     let flowLayout = UICollectionViewFlowLayout()
     
     var goalList: [Goal] = [
@@ -62,6 +64,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
         //cell.customizeChart()
         let goal = goalList[indexPath.item]
+        
+        //전달
+        let percent = Double(goal.count) / Double(goal.goalCount)
+        
         cell.setData(goal: goal)
         cell.configureGraph(percent: Double(goal.count) / Double(goal.goalCount))
         cell.configureUI()
@@ -70,10 +76,15 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.delegate = self
         cell.indexPath = indexPath
         return cell
+        
     }
     
+    //눌렀을 때 화면 전환
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let goal = goalList[indexPath.item]
+        let percent = (Double(goal.count) / Double(goal.goalCount))*100
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        vc.percentValue = percent
         navigationController?.pushViewController(vc, animated: true)
     }
 }
