@@ -16,6 +16,8 @@
 		5766683C2A52B30100A8115C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5766683A2A52B30100A8115C /* LaunchScreen.storyboard */; };
 		576668492A52DA6600A8115C /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576668482A52DA6600A8115C /* HomeCollectionViewCell.swift */; };
 		5766684D2A52E32400A8115C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766684C2A52E32400A8115C /* DetailViewController.swift */; };
+		576668502A52EAAE00A8115C /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 5766684F2A52EAAE00A8115C /* DGCharts */; };
+		576668532A52F78100A8115C /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576668522A52F78100A8115C /* GraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,7 @@
 		5766683D2A52B30100A8115C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		576668482A52DA6600A8115C /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		5766684C2A52E32400A8115C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		576668522A52F78100A8115C /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				576668502A52EAAE00A8115C /* DGCharts in Frameworks */,
 				48FB4E3B2A52E54F005A4A3F /* Hue in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +89,7 @@
 			children = (
 				5766684B2A52DE8600A8115C /* Storyboard */,
 				576668482A52DA6600A8115C /* HomeCollectionViewCell.swift */,
+				576668522A52F78100A8115C /* GraphView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			name = "UMC-Hackathon";
 			packageProductDependencies = (
 				48FB4E3A2A52E54F005A4A3F /* Hue */,
+				5766684F2A52EAAE00A8115C /* DGCharts */,
 			);
 			productName = "UMC-Hackathon";
 			productReference = 5766682C2A52B30100A8115C /* UMC-Hackathon.app */;
@@ -156,6 +162,7 @@
 			mainGroup = 576668232A52B30100A8115C;
 			packageReferences = (
 				48FB4E392A52E54F005A4A3F /* XCRemoteSwiftPackageReference "Hue" */,
+				5766684E2A52EAAE00A8115C /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = 5766682D2A52B30100A8115C /* Products */;
 			projectDirPath = "";
@@ -189,6 +196,7 @@
 				5766684D2A52E32400A8115C /* DetailViewController.swift in Sources */,
 				576668322A52B30100A8115C /* SceneDelegate.swift in Sources */,
 				576668492A52DA6600A8115C /* HomeCollectionViewCell.swift in Sources */,
+				576668532A52F78100A8115C /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +430,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		5766684E2A52EAAE00A8115C /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -429,6 +445,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 48FB4E392A52E54F005A4A3F /* XCRemoteSwiftPackageReference "Hue" */;
 			productName = Hue;
+		};
+		5766684F2A52EAAE00A8115C /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5766684E2A52EAAE00A8115C /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

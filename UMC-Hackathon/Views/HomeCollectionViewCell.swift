@@ -9,13 +9,74 @@ import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var first: UIView!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var pieChartView: UIView!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var predictPercent: UILabel!
     
-    @IBOutlet weak var second: UIView!
+    private let graphView = GraphView()
     
-    @IBOutlet weak var third: UIView!
+    private let stackView: UIStackView = {
+        let sv = UIStackView()
+        sv.axis = .vertical
+        sv.spacing = 5
+        sv.distribution = .fill
+        sv.alignment = .fill
+        return sv
+    }()
     
-    @IBOutlet weak var fourth: UIView!
+    private let percentLabel: UILabel = {
+        let label = UILabel()
+        label.text = "88%"
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.textAlignment = .center
+        return label
+    }()
     
-    @IBOutlet weak var fifth: UIView!
+    private let divLabel: UILabel = {
+        let label = UILabel()
+        label.text = "88/100"
+        label.font = UIFont.systemFont(ofSize: 13, weight: .light)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+    }
+    
+    func configureUI(percent: Double) {
+        containerView.layer.cornerRadius = 40
+        
+        pieChartView.backgroundColor = .clear
+        graphView.backgroundColor = .clear
+        
+        graphView.setOuterRingColor(.lightGray)
+        //graphView.setInnerRingColor(.systemBlue)
+        graphView.setOuterRingPercentage(percent)
+        //graphView.setInnerRingPercentage(0.8)
+        
+        pieChartView.addSubview(graphView)
+        graphView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            graphView.centerXAnchor.constraint(equalTo: pieChartView.centerXAnchor),
+            graphView.centerYAnchor.constraint(equalTo: pieChartView.centerYAnchor),
+            graphView.widthAnchor.constraint(equalTo: pieChartView.widthAnchor),
+            graphView.heightAnchor.constraint(equalTo: pieChartView.heightAnchor)
+        ])
+        
+        stackView.addArrangedSubview(percentLabel)
+        stackView.addArrangedSubview(divLabel)
+        
+        graphView.addSubview(stackView)
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        percentLabel.translatesAutoresizingMaskIntoConstraints = false
+        divLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stackView.centerXAnchor.constraint(equalTo: graphView.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: graphView.centerYAnchor)
+        ])
+    }
 }
