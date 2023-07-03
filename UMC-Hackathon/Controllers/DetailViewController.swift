@@ -61,7 +61,7 @@ class DetailViewController: UIViewController {
             
             graphView.backgroundColor = .clear
             
-            graphView.setOuterRingColor(.white)
+        graphView.setOuterRingColor(UIColor(red: 0.65, green: 0.67, blue: 0.71, alpha: 1.00))
             //graphView.setInnerRingColor(.systemBlue)
             graphView.setOuterRingPercentage(percent)
             //graphView.setInnerRingPercentage(0.8)

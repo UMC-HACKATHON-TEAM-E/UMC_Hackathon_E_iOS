@@ -71,12 +71,12 @@ class GraphView: UIView {
         shapeMask.fillRule = .evenOdd
         
         let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = CGRect(x: 0, y: 1, width: self.bounds.width, height: self.bounds.height)
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
       //  gradientLayer.frame = self.bounds
-        gradientLayer.colors = [UIColor(red: 0.00, green: 0.48, blue: 1.00, alpha: 1.00).cgColor, UIColor(red: 0.69, green: 0.32, blue: 0.87, alpha: 1.00).cgColor]
+        gradientLayer.colors = [UIColor(red: 0.69, green: 0.32, blue: 0.87, alpha: 1.00).cgColor, UIColor(red: 0.00, green: 0.48, blue: 1.00, alpha: 1.00).cgColor]
 
-        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
-        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
         
         gradientLayer.mask = shapeMask
         self.layer.addSublayer(gradientLayer)
