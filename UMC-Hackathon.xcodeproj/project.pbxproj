@@ -18,6 +18,7 @@
 		5766684D2A52E32400A8115C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766684C2A52E32400A8115C /* DetailViewController.swift */; };
 		576668502A52EAAE00A8115C /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 5766684F2A52EAAE00A8115C /* DGCharts */; };
 		576668532A52F78100A8115C /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576668522A52F78100A8115C /* GraphView.swift */; };
+		576668552A530AA800A8115C /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576668542A530AA800A8115C /* CreateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		576668482A52DA6600A8115C /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		5766684C2A52E32400A8115C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		576668522A52F78100A8115C /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		576668542A530AA800A8115C /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				576668332A52B30100A8115C /* HomeViewController.swift */,
 				5766684C2A52E32400A8115C /* DetailViewController.swift */,
+				576668542A530AA800A8115C /* CreateViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			files = (
 				576668342A52B30100A8115C /* HomeViewController.swift in Sources */,
 				576668302A52B30100A8115C /* AppDelegate.swift in Sources */,
+				576668552A530AA800A8115C /* CreateViewController.swift in Sources */,
 				5766684D2A52E32400A8115C /* DetailViewController.swift in Sources */,
 				576668322A52B30100A8115C /* SceneDelegate.swift in Sources */,
 				576668492A52DA6600A8115C /* HomeCollectionViewCell.swift in Sources */,

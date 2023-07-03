@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupCollectionView()
+        setupNavigationBar()
     }
 
     private func setupCollectionView() {
@@ -30,6 +31,14 @@ class HomeViewController: UIViewController {
         collectionView.collectionViewLayout = flowLayout
     }
 
+    private func setupNavigationBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(rightBarButtonTapped))
+    }
+    
+    @objc func rightBarButtonTapped() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "CreateViewController") as! CreateViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {

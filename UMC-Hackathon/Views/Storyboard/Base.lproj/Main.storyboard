@@ -154,6 +154,21 @@
             </objects>
             <point key="canvasLocation" x="892.36641221374043" y="-27.464788732394368"/>
         </scene>
+        <!--Create View Controller-->
+        <scene sceneID="UYO-IL-tDB">
+            <objects>
+                <viewController storyboardIdentifier="CreateViewController" id="rFT-1c-Rkc" customClass="CreateViewController" customModule="UMC_Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hNv-Cu-KZ3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wVG-SL-QWD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7jk-zK-bAk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1627" y="-690"/>
+        </scene>
         <!--Detail View Controller-->
         <scene sceneID="9gY-zU-5nD">
             <objects>
