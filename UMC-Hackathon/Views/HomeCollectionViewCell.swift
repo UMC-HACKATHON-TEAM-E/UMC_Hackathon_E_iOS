@@ -13,6 +13,7 @@ protocol HomeCollectionViewCellDelegate: AnyObject {
 
 class HomeCollectionViewCell: UICollectionViewCell {
     
+    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var pieChartView: UIView!
     @IBOutlet weak var title: UILabel!
