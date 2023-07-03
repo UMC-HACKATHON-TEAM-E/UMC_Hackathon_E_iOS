@@ -19,6 +19,7 @@
 		576668502A52EAAE00A8115C /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 5766684F2A52EAAE00A8115C /* DGCharts */; };
 		576668532A52F78100A8115C /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576668522A52F78100A8115C /* GraphView.swift */; };
 		576668552A530AA800A8115C /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576668542A530AA800A8115C /* CreateViewController.swift */; };
+		5766685B2A531BB600A8115C /* CountCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766685A2A531BB600A8115C /* CountCheckViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		5766684C2A52E32400A8115C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		576668522A52F78100A8115C /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		576668542A530AA800A8115C /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		5766685A2A531BB600A8115C /* CountCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountCheckViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				5766684B2A52DE8600A8115C /* Storyboard */,
 				576668482A52DA6600A8115C /* HomeCollectionViewCell.swift */,
 				576668522A52F78100A8115C /* GraphView.swift */,
+				5766685A2A531BB600A8115C /* CountCheckViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				576668322A52B30100A8115C /* SceneDelegate.swift in Sources */,
 				576668492A52DA6600A8115C /* HomeCollectionViewCell.swift in Sources */,
 				576668532A52F78100A8115C /* GraphView.swift in Sources */,
+				5766685B2A531BB600A8115C /* CountCheckViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

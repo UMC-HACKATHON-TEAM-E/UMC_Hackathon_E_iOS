@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol HomeCollectionViewCellDelegate: AnyObject {
+    func okAlertButtonTapped()
+}
+
 class HomeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var containerView: UIView!
@@ -16,6 +20,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var confirmButton: UIButton!
+    
+    weak var delegate: HomeCollectionViewCellDelegate?
     
     private let graphView = GraphView()
     
@@ -90,6 +96,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func confirmButtonTapped(_ sender: UIButton) {
+        print("tap")
+        delegate?.okAlertButtonTapped()
     }
     
 }

@@ -51,11 +51,33 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         //cell.customizeChart()
         cell.configureGraph(percent: 0.5)
         cell.configureUI()
+        cell.delegate = self
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension HomeViewController: HomeCollectionViewCellDelegate {
+    func okAlertButtonTapped() {
+        let title = "근육몬 되기 대작전 인증"
+        let message = "헬스장 가기를 이루셨나요?"
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "네", style: .default) { _ in
+            print("네")
+        }
+        
+        let cancel = UIAlertAction(title: "아니오", style: .cancel) { _ in
+            print("아니오")
+        }
+        
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        
+        present(alert, animated: true)
     }
 }
