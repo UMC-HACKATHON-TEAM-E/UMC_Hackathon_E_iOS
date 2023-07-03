@@ -29,6 +29,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var InformationVIew: UIView!
     
+    @IBOutlet weak var dateLabel: UILabel!
     var percentParameter:Double = 0.0
     
     var left:Int = 0
@@ -143,7 +144,10 @@ class DetailViewController: UIViewController {
         
         var resultPlaying = Int(((left) / (right)) * 100)
         
+        dateLabel.text = "\(goal.startDate) ~ 2023.07.04"
         
+        
+        currentNum.text = "\(Int(percentValue!))%"
         
         var first:Int = Int((currentNum.text?.split(separator: "%")[0])!) ?? 0
         var second:Int = Int((habitNum.text?.split(separator: "%")[0])!) ?? 0

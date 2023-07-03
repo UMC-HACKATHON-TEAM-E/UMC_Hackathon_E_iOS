@@ -62,6 +62,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
+        configureGraph(percent: 0.0)
     }
     
     func setData(goal: Goal) {

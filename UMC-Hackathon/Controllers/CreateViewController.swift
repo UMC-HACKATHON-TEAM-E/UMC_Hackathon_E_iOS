@@ -78,9 +78,11 @@ class CreateViewController: UIViewController {
         guard let vcStack = self.navigationController?.viewControllers else { return }
         for view in vcStack {
             if let vc = view as? HomeViewController {
-                vc.goalList.insert(goal, at: 0)
-                vc.collectionView.reloadData()
+                //vc.goalList.insert(goal, at: 0)
+                vc.goalList.append(goal)
+                
                 self.navigationController?.popToViewController(vc, animated: true)
+                vc.collectionView.reloadData()
             }
         }
 //        let newGoal = NewGoal(userId: 1, title: title, goalCount: goalCount, period: period)

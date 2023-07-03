@@ -24,8 +24,8 @@ class HomeViewController: UIViewController {
     let flowLayout = UICollectionViewFlowLayout()
     
     var goalList: [Goal] = [
-        Goal(goalID: 1, title: "백준 골드 가보자!", startDate: "2023.07.01", endDate: "", goalCount: 150, user: User(id: 1, email: "", password: "", name: ""), period: 200, count: 1, possibility: 0, promise: "알고리즘 고수가 되기까지 천천히 시작해보자!", lastDays: 3),
-        Goal(goalID: 1, title: "내 몸을 건강하게", startDate: "2023.06.14", endDate: "", goalCount: 100, user: User(id: 1, email: "", password: "", name: ""), period: 100, count: 18, possibility: 100, promise: "하루도 빠지지 말고 끝까지 해내보자", lastDays: 20)
+        Goal(goalID: 1, title: "백준 꾸준히 풀기", startDate: "2023.07.01", endDate: "", goalCount: 150, user: User(id: 1, email: "", password: "", name: ""), period: 200, count: 1, possibility: 0, promise: "알고리즘 고수가 되기까지 천천히 시작해보자!", lastDays: 4)
+//        Goal(goalID: 1, title: "내 몸을 건강하게", startDate: "2023.06.14", endDate: "", goalCount: 100, user: User(id: 1, email: "", password: "", name: ""), period: 100, count: 18, possibility: 100, promise: "하루도 빠지지 말고 끝까지 해내보자", lastDays: 20)
     ]
     
     

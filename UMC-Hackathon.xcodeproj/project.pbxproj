@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07BAEEE12A5375B200003CB8 /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07BAEEE02A5375B200003CB8 /* SecretKey.plist */; };
 		480010342A53135600BA29DD /* Sansation_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 480010322A530E4C00BA29DD /* Sansation_Regular.ttf */; };
 		480010352A53135800BA29DD /* Sansation_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 480010332A530F0B00BA29DD /* Sansation_Bold.ttf */; };
-		484FAEF02A534E8300D340B3 /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 484FAEEF2A534E8300D340B3 /* SecretKey.plist */; };
 		48FB4E3B2A52E54F005A4A3F /* Hue in Frameworks */ = {isa = PBXBuildFile; productRef = 48FB4E3A2A52E54F005A4A3F /* Hue */; };
 		576668302A52B30100A8115C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766682F2A52B30100A8115C /* AppDelegate.swift */; };
 		576668322A52B30100A8115C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576668312A52B30100A8115C /* SceneDelegate.swift */; };
@@ -30,9 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07BAEEE02A5375B200003CB8 /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
 		480010322A530E4C00BA29DD /* Sansation_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sansation_Regular.ttf; sourceTree = "<group>"; };
 		480010332A530F0B00BA29DD /* Sansation_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sansation_Bold.ttf; sourceTree = "<group>"; };
-		484FAEEF2A534E8300D340B3 /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
 		5766682C2A52B30100A8115C /* UMC-Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-Hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5766682F2A52B30100A8115C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		576668312A52B30100A8115C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 				576668462A52D6B200A8115C /* Controllers */,
 				576668382A52B30100A8115C /* Assets.xcassets */,
 				5766683D2A52B30100A8115C /* Info.plist */,
-				484FAEEF2A534E8300D340B3 /* SecretKey.plist */,
+				07BAEEE02A5375B200003CB8 /* SecretKey.plist */,
 			);
 			path = "UMC-Hackathon";
 			sourceTree = "<group>";
@@ -241,7 +241,7 @@
 				576668392A52B30100A8115C /* Assets.xcassets in Resources */,
 				480010352A53135800BA29DD /* Sansation_Bold.ttf in Resources */,
 				480010342A53135600BA29DD /* Sansation_Regular.ttf in Resources */,
-				484FAEF02A534E8300D340B3 /* SecretKey.plist in Resources */,
+				07BAEEE12A5375B200003CB8 /* SecretKey.plist in Resources */,
 				576668372A52B30100A8115C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
