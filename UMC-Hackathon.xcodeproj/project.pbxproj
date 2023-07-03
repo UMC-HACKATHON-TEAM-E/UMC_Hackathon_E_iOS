@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		480010342A53135600BA29DD /* Sansation_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 480010322A530E4C00BA29DD /* Sansation_Regular.ttf */; };
+		480010352A53135800BA29DD /* Sansation_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 480010332A530F0B00BA29DD /* Sansation_Bold.ttf */; };
 		48FB4E3B2A52E54F005A4A3F /* Hue in Frameworks */ = {isa = PBXBuildFile; productRef = 48FB4E3A2A52E54F005A4A3F /* Hue */; };
 		576668302A52B30100A8115C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766682F2A52B30100A8115C /* AppDelegate.swift */; };
 		576668322A52B30100A8115C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576668312A52B30100A8115C /* SceneDelegate.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		480010322A530E4C00BA29DD /* Sansation_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sansation_Regular.ttf; sourceTree = "<group>"; };
+		480010332A530F0B00BA29DD /* Sansation_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sansation_Bold.ttf; sourceTree = "<group>"; };
 		5766682C2A52B30100A8115C /* UMC-Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-Hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5766682F2A52B30100A8115C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		576668312A52B30100A8115C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		480010312A530E3700BA29DD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				480010322A530E4C00BA29DD /* Sansation_Regular.ttf */,
+				480010332A530F0B00BA29DD /* Sansation_Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		576668232A52B30100A8115C = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +83,7 @@
 		5766682E2A52B30100A8115C /* UMC-Hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				480010312A530E3700BA29DD /* Fonts */,
 				5766684A2A52DE7B00A8115C /* App */,
 				576668472A52DA4F00A8115C /* Views */,
 				576668462A52D6B200A8115C /* Controllers */,
@@ -186,6 +200,8 @@
 			files = (
 				5766683C2A52B30100A8115C /* LaunchScreen.storyboard in Resources */,
 				576668392A52B30100A8115C /* Assets.xcassets in Resources */,
+				480010352A53135800BA29DD /* Sansation_Bold.ttf in Resources */,
+				480010342A53135600BA29DD /* Sansation_Regular.ttf in Resources */,
 				576668372A52B30100A8115C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
