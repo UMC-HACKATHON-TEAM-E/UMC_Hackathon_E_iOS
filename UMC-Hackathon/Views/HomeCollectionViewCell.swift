@@ -87,7 +87,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         pieChartView.backgroundColor = .clear
         graphView.backgroundColor = .clear
         
-        graphView.setOuterRingColor(.systemGray6)
+        graphView.setOuterRingColor(UIColor(red: 0.65, green: 0.67, blue: 0.71, alpha: 1.00))
         //graphView.setInnerRingColor(.systemBlue)
         graphView.setOuterRingPercentage(percent)
         //graphView.setInnerRingPercentage(0.8)

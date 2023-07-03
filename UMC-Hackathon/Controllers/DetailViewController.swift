@@ -18,8 +18,13 @@ class DetailViewController: UIViewController {
     //그래프 들어가는 뷰
     @IBOutlet weak var middleView: UIView!
     
-    //그래프 위
+    //그래프 위 제목
     @IBOutlet weak var titleFont: UILabel!
+    
+    //목표 제목
+    @IBOutlet weak var secondTitle: UILabel!
+    
+    @IBOutlet weak var InformationVIew: UIView!
     
     let graphView = GraphView()
     
@@ -56,7 +61,7 @@ class DetailViewController: UIViewController {
             
             graphView.backgroundColor = .clear
             
-            graphView.setOuterRingColor(.systemGray6)
+        graphView.setOuterRingColor(UIColor(red: 0.65, green: 0.67, blue: 0.71, alpha: 1.00))
             //graphView.setInnerRingColor(.systemBlue)
             graphView.setOuterRingPercentage(percent)
             //graphView.setInnerRingPercentage(0.8)
@@ -99,10 +104,18 @@ class DetailViewController: UIViewController {
         middleView.layer.cornerRadius = middleView.layer.frame.height/2
         
         
+        //informationVIew
+        InformationVIew.backgroundColor = .clear
+        InformationVIew.layer.borderWidth = 2
+        InformationVIew.layer.borderColor = UIColor(red: 0.81, green: 0.83, blue: 0.85, alpha: 1.00).cgColor
+        InformationVIew.layer.cornerRadius = 10
+        
         //뷰 앞으로 가져오기
         self.view.bringSubviewToFront(bottomView)
         self.view.bringSubviewToFront(middleView)
         self.view.bringSubviewToFront(titleFont)
+        self.view.bringSubviewToFront(secondTitle)
+        self.view.bringSubviewToFront(InformationVIew)
         
         configureGraph(percent: 0.8)
         
