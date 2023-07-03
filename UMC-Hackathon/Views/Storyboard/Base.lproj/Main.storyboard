@@ -185,77 +185,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="진행중인 목표" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbT-wY-oPs">
+                                <rect key="frame" x="150.66666666666666" y="54" width="92" height="19"/>
+                                <fontDescription key="fontDescription" name="Sansation-Bold" family="Sansation" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75M-0p-yqe">
                                 <rect key="frame" x="0.0" y="194" width="393" height="658"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="목표" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xs4-ti-jId">
                                         <rect key="frame" x="181.66666666666666" y="110" width="29.666666666666657" height="19"/>
                                         <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemGray2Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="근육몬되기 대작전!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kel-8K-0mE">
-                                        <rect key="frame" x="122" y="134" width="149" height="23"/>
-                                        <fontDescription key="fontDescription" name="Sansation-Bold" family="Sansation" pointSize="20"/>
+                                        <rect key="frame" x="85.333333333333329" y="134" width="222.66666666666669" height="33.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="Sansation-Bold" family="Sansation" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="달성 가능 확률" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxz-v3-Ac0">
-                                        <rect key="frame" x="45" y="220" width="97" height="19"/>
+                                        <rect key="frame" x="45.000000000000007" y="220" width="96.666666666666686" height="19"/>
                                         <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이대로 가자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GV-AK-WPA">
-                                        <rect key="frame" x="148" y="256" width="87" height="22"/>
+                                        <rect key="frame" x="147.66666666666666" y="256" width="87" height="22"/>
                                         <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100일 동안 89회" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YV-cY-WyO">
-                                        <rect key="frame" x="148" y="338" width="132" height="22"/>
+                                        <rect key="frame" x="152.66666666666663" y="338" width="131.33333333333337" height="22"/>
                                         <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="178%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egm-SQ-SLu">
-                                        <rect key="frame" x="45" y="249" width="65" height="34"/>
+                                        <rect key="frame" x="45.000000000000007" y="248.99999999999997" width="64.666666666666686" height="33.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="달성습관지수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXw-5U-Jn6">
-                                        <rect key="frame" x="45" y="303" width="89" height="19"/>
+                                        <rect key="frame" x="45" y="302.66666666666669" width="89" height="19"/>
                                         <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="89%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upj-Rd-Asi">
-                                        <rect key="frame" x="45" y="332" width="58" height="34"/>
+                                        <rect key="frame" x="45" y="331.66666666666663" width="57.666666666666657" height="33.666666666666686"/>
                                         <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="목표습관지수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZe-Qd-VqE">
-                                        <rect key="frame" x="45" y="386" width="89" height="19"/>
+                                        <rect key="frame" x="45" y="385.33333333333337" width="89" height="19"/>
                                         <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp0-5T-2Ig">
-                                        <rect key="frame" x="45" y="415" width="60" height="34"/>
+                                        <rect key="frame" x="45" y="414.33333333333337" width="59.333333333333343" height="33.666666666666686"/>
                                         <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200일 동안 100회" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOL-Fn-3ot">
-                                        <rect key="frame" x="150" y="420" width="146" height="22"/>
+                                        <rect key="frame" x="154.33333333333331" y="420" width="145.33333333333331" height="22"/>
                                         <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Xs4-ti-jId" firstAttribute="centerX" secondItem="75M-0p-yqe" secondAttribute="centerX" id="0AP-NV-sto"/>
                                     <constraint firstItem="upj-Rd-Asi" firstAttribute="top" secondItem="PXw-5U-Jn6" secondAttribute="bottom" constant="10" id="4gQ-ET-7So"/>
@@ -278,22 +284,36 @@
                                     <constraint firstItem="sxz-v3-Ac0" firstAttribute="leading" secondItem="75M-0p-yqe" secondAttribute="leading" constant="45" id="hnn-wW-lVL"/>
                                     <constraint firstItem="egm-SQ-SLu" firstAttribute="top" secondItem="sxz-v3-Ac0" secondAttribute="bottom" constant="10" id="lEi-sh-44r"/>
                                     <constraint firstItem="PXw-5U-Jn6" firstAttribute="top" secondItem="egm-SQ-SLu" secondAttribute="bottom" constant="20" id="lWc-ml-hMR"/>
-                                    <constraint firstItem="NOL-Fn-3ot" firstAttribute="leading" secondItem="zp0-5T-2Ig" secondAttribute="trailing" constant="45" id="rsp-Vt-zoB"/>
+                                    <constraint firstItem="NOL-Fn-3ot" firstAttribute="leading" secondItem="zp0-5T-2Ig" secondAttribute="trailing" constant="50" id="rsp-Vt-zoB"/>
                                     <constraint firstItem="Kel-8K-0mE" firstAttribute="centerX" secondItem="75M-0p-yqe" secondAttribute="centerX" id="tFz-7r-FSa"/>
-                                    <constraint firstItem="1YV-cY-WyO" firstAttribute="leading" secondItem="upj-Rd-Asi" secondAttribute="trailing" constant="45" id="yaE-7x-P6v"/>
+                                    <constraint firstItem="1YV-cY-WyO" firstAttribute="leading" secondItem="upj-Rd-Asi" secondAttribute="trailing" constant="50" id="yaE-7x-P6v"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rl4-HW-7Fm">
+                                <rect key="frame" x="76.666666666666686" y="79" width="240" height="240"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="26K-t3-ezz"/>
+                                    <constraint firstAttribute="width" constant="240" id="BjU-W2-gFw"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mZa-dH-wUd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="rl4-HW-7Fm" firstAttribute="centerX" secondItem="chh-bs-cDz" secondAttribute="centerX" id="0ax-DB-1Lp"/>
                             <constraint firstItem="75M-0p-yqe" firstAttribute="top" secondItem="mZa-dH-wUd" secondAttribute="top" constant="135" id="VhI-eR-qc2"/>
                             <constraint firstItem="75M-0p-yqe" firstAttribute="leading" secondItem="mZa-dH-wUd" secondAttribute="leading" id="e29-lW-aKE"/>
+                            <constraint firstItem="rbT-wY-oPs" firstAttribute="centerX" secondItem="chh-bs-cDz" secondAttribute="centerX" id="mnt-jK-lNr"/>
                             <constraint firstItem="75M-0p-yqe" firstAttribute="trailing" secondItem="mZa-dH-wUd" secondAttribute="trailing" id="t7B-s5-aD5"/>
+                            <constraint firstItem="rbT-wY-oPs" firstAttribute="top" secondItem="mZa-dH-wUd" secondAttribute="top" constant="-5" id="wbE-lw-lJ9"/>
+                            <constraint firstItem="rl4-HW-7Fm" firstAttribute="top" secondItem="mZa-dH-wUd" secondAttribute="top" constant="20" id="yRc-bO-M30"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bottomView" destination="75M-0p-yqe" id="pdb-cy-X2l"/>
+                        <outlet property="middleView" destination="rl4-HW-7Fm" id="tsw-Yy-xnV"/>
+                        <outlet property="titleFont" destination="rbT-wY-oPs" id="rwm-Bk-jkS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJR-AT-TXs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -325,6 +345,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
