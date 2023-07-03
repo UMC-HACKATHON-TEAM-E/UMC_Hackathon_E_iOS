@@ -6,59 +6,77 @@
 //
 
 import UIKit
-import DGCharts
 
 class HomeCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var pieChart: PieChartView!
-    
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var pieChartView: UIView!
     @IBOutlet weak var title: UILabel!
-    
     @IBOutlet weak var predictPercent: UILabel!
     
-    let players = ["A", "B"]
-    var values: [Double] = [40.0, 60.0]
+    private let graphView = GraphView()
+    
+    private let stackView: UIStackView = {
+        let sv = UIStackView()
+        sv.axis = .vertical
+        sv.spacing = 5
+        sv.distribution = .fill
+        sv.alignment = .fill
+        return sv
+    }()
+    
+    private let percentLabel: UILabel = {
+        let label = UILabel()
+        label.text = "88%"
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private let divLabel: UILabel = {
+        let label = UILabel()
+        label.text = "88/100"
+        label.font = UIFont.systemFont(ofSize: 13, weight: .light)
+        label.textAlignment = .center
+        return label
+    }()
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        //customizeChart()
     }
     
-    func customizeChart() {
-        var dataEntries: [ChartDataEntry] = []
-        for i in 0..<players.count {
-            let dataEntry = PieChartDataEntry(value: values[i], label: nil, data: players[i] as AnyObject)
-            dataEntries.append(dataEntry)
-        }
+    func configureUI(percent: Double) {
+        containerView.layer.cornerRadius = 40
         
-        let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
-        pieChartDataSet.valueTextColor = .black
-        pieChartDataSet.drawValuesEnabled = false
-        pieChartDataSet.colors = colorsOfCharts(numbersOfColor: players.count)
+        pieChartView.backgroundColor = .clear
+        graphView.backgroundColor = .clear
         
+        graphView.setOuterRingColor(.lightGray)
+        //graphView.setInnerRingColor(.systemBlue)
+        graphView.setOuterRingPercentage(percent)
+        //graphView.setInnerRingPercentage(0.8)
         
-        let pieChartData = PieChartData(dataSet: pieChartDataSet)
-        let format = NumberFormatter()
-        format.numberStyle = .none
-        let formatter = DefaultValueFormatter(formatter: format)
-        pieChartData.setValueFormatter(formatter)
+        pieChartView.addSubview(graphView)
+        graphView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            graphView.centerXAnchor.constraint(equalTo: pieChartView.centerXAnchor),
+            graphView.centerYAnchor.constraint(equalTo: pieChartView.centerYAnchor),
+            graphView.widthAnchor.constraint(equalTo: pieChartView.widthAnchor),
+            graphView.heightAnchor.constraint(equalTo: pieChartView.heightAnchor)
+        ])
         
-        pieChart.drawEntryLabelsEnabled = false
-        pieChart.legend.form = .none
-        pieChart.data = pieChartData
+        stackView.addArrangedSubview(percentLabel)
+        stackView.addArrangedSubview(divLabel)
         
-    }
-    
-    private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
-//        var colors: [UIColor] = []
-//        for _ in 0..<numbersOfColor {
-//            let red = Double(arc4random_uniform(256))
-//            let green = Double(arc4random_uniform(256))
-//            let blue = Double(arc4random_uniform(256))
-//            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-//            colors.append(color)
-//        }
-        return [UIColor.green, UIColor.gray]
+        graphView.addSubview(stackView)
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        percentLabel.translatesAutoresizingMaskIntoConstraints = false
+        divLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stackView.centerXAnchor.constraint(equalTo: graphView.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: graphView.centerYAnchor)
+        ])
     }
 }

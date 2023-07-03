@@ -39,7 +39,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
-        cell.customizeChart()
+        //cell.customizeChart()
+        cell.configureUI(percent: 0.5)
         return cell
     }
     
