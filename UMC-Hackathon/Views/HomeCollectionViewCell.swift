@@ -45,7 +45,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     private let percentLabel: UILabel = {
         let label = UILabel()
         label.text = "88%"
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         label.textAlignment = .center
         return label
     }()
@@ -53,7 +53,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     private let divLabel: UILabel = {
         let label = UILabel()
         label.text = "88/100"
-        label.font = UIFont.systemFont(ofSize: 13, weight: .light)
+        label.font = UIFont.systemFont(ofSize: 11, weight: .light)
         label.textAlignment = .center
         return label
     }()
@@ -66,7 +66,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     func setData(goal: Goal) {
         self.goal = goal
         title.text = goal.title
-        divLabel.text = "\(goal.count)/\(goal.goalCount)"
+        divLabel.text = "\(goal.count)/\(goal.lastDays ?? 1)"
     }
     
     func configureUI() {
@@ -114,7 +114,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
             stackView.centerYAnchor.constraint(equalTo: graphView.centerYAnchor)
         ])
         
-        percentLabel.text = "\(round(percent * 100 * 100) / 100)%"
+        //percentLabel.text = "\(round(percent * 100 * 100) / 100)%"
+        percentLabel.text = "\(Int(percent * 100))%"
     }
     
     @IBAction func confirmButtonTapped(_ sender: UIButton) {

@@ -7,6 +7,14 @@
 
 import UIKit
 
+struct CustomDateFormatter {
+    static let format: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy.MM.dd"
+        return formatter
+    }()
+}
+
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -14,9 +22,11 @@ class HomeViewController: UIViewController {
     let flowLayout = UICollectionViewFlowLayout()
     
     var goalList: [Goal] = [
-        Goal(goalID: 1, title: "백준 골드 가보자!", startDate: "", endDate: "", goalCount: 150, user: User(id: 1, email: "", password: "", name: ""), period: 200, count: 0, possibility: 0, promise: "알고리즘 고수가 되기까지 천천히 시작해보자!"),
-        Goal(goalID: 1, title: "내 몸을 건강하게", startDate: "", endDate: "", goalCount: 100, user: User(id: 1, email: "", password: "", name: ""), period: 100, count: 34, possibility: 100, promise: "하루도 빠지지 말고 끝까지 해내보자")
+        Goal(goalID: 1, title: "백준 골드 가보자!", startDate: "2023.07.04", endDate: "", goalCount: 150, user: User(id: 1, email: "", password: "", name: ""), period: 200, count: 0, possibility: 0, promise: "알고리즘 고수가 되기까지 천천히 시작해보자!", lastDays: 1),
+        Goal(goalID: 1, title: "내 몸을 건강하게", startDate: "2023.06.14", endDate: "", goalCount: 100, user: User(id: 1, email: "", password: "", name: ""), period: 100, count: 18, possibility: 100, promise: "하루도 빠지지 말고 끝까지 해내보자", lastDays: 20)
     ]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +36,13 @@ class HomeViewController: UIViewController {
         setupCollectionView()
         setupNavigationBar()
         
-//        GoalService.shared.requestGoalList(userId: 1) { goalList in
-//            self.goalList = goalList
-//            DispatchQueue.main.async {
-//                self.collectionView.reloadData()
-//            }
-//        }
+        GoalService.shared.requestGoalList(userId: 1) { goalList in
+            goalList.forEach { self.goalList.append($0) }
+
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
     }
 
     private func setupCollectionView() {
@@ -61,11 +72,20 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
         //cell.customizeChart()
+        
         let goal = goalList[indexPath.item]
+//        let now = Date()
+//        let timeInterval = now.timeIntervalSince(CustomDateFormatter.format.date(from: goal.startDate)!)
+//
+//        print(Int(timeInterval / 86400))
+        let left = Double(goal.count) / Double(goal.lastDays ?? 1)
+        let right = Double(goal.goalCount) / Double(goal.period)
+        let pos = Int(left / right * 100)
+        
         cell.setData(goal: goal)
-        cell.configureGraph(percent: Double(goal.count) / Double(goal.goalCount))
+        cell.configureGraph(percent: Double(goal.count) / Double(goal.lastDays ?? 1))
         cell.configureUI()
-        cell.possibilityPercent.text = "\(goal.possibility ?? 0)%"
+        cell.possibilityPercent.text = "\(pos ?? 0)%"
         cell.promise.text = goal.promise ?? ""
         cell.delegate = self
         cell.indexPath = indexPath

@@ -424,16 +424,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="진행중인 목표" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbT-wY-oPs">
-                                <rect key="frame" x="150" y="54" width="92" height="19"/>
+                                <rect key="frame" x="150.66666666666666" y="54" width="92" height="19"/>
                                 <fontDescription key="fontDescription" name="Sansation-Bold" family="Sansation" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75M-0p-yqe">
-                                <rect key="frame" x="0.0" y="193" width="392" height="659"/>
+                                <rect key="frame" x="0.0" y="193" width="393" height="659"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="목표" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xs4-ti-jId">
-                                        <rect key="frame" x="182" y="85" width="28" height="18"/>
+                                        <rect key="frame" x="182" y="85" width="29" height="18"/>
                                         <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="16"/>
                                         <color key="textColor" systemColor="systemGray2Color"/>
                                         <nil key="highlightedColor"/>
@@ -451,7 +451,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aA3-hh-mxK">
-                                        <rect key="frame" x="50" y="194.66666666666669" width="273" height="290"/>
+                                        <rect key="frame" x="50" y="194.66666666666669" width="293" height="290"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재습관지수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Oo-f7-Yvd">
                                                 <rect key="frame" x="20" y="27" width="78" height="17"/>
@@ -460,55 +460,55 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qg-Po-hgb">
-                                                <rect key="frame" x="20" y="47" width="60" height="34"/>
+                                                <rect key="frame" x="20.000000000000004" y="47" width="59.333333333333343" height="33.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="30"/>
                                                 <color key="textColor" red="0.20392156862745098" green="0.42745098039215684" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="목표습관지수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYe-tF-NAp">
-                                                <rect key="frame" x="170" y="27" width="78" height="17"/>
+                                                <rect key="frame" x="190" y="27" width="78" height="17"/>
                                                 <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhS-y1-aYA">
-                                                <rect key="frame" x="170" y="47" width="61" height="34"/>
+                                                <rect key="frame" x="190.33333333333334" y="47" width="60.666666666666657" height="33.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="30"/>
                                                 <color key="textColor" red="0.20392156859999999" green="0.42745098040000001" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="달성 가능 확률" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTs-tg-0fB">
-                                                <rect key="frame" x="20" y="116" width="86" height="17"/>
+                                                <rect key="frame" x="20" y="115.66666666666663" width="86" height="17"/>
                                                 <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="83%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ft8-Az-P6r">
-                                                <rect key="frame" x="20" y="135.99999999999994" width="56" height="34"/>
+                                                <rect key="frame" x="20" y="135.66666666666669" width="56" height="33.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="30"/>
                                                 <color key="textColor" red="0.66274509803921566" green="0.32549019607843138" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="진행도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCT-kP-u60">
-                                                <rect key="frame" x="20" y="204.99999999999994" width="39" height="17"/>
+                                                <rect key="frame" x="20" y="204.33333333333331" width="39" height="17"/>
                                                 <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhD-kB-VvN">
-                                                <rect key="frame" x="20" y="224.99999999999994" width="60" height="34"/>
+                                                <rect key="frame" x="20.000000000000004" y="224.33333333333331" width="59.333333333333343" height="33.666666666666686"/>
                                                 <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="30"/>
                                                 <color key="textColor" red="0.66274509800000003" green="0.32549019610000002" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(현재 습관지수 / 목표습관지수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyj-Z6-9if">
-                                                <rect key="frame" x="109" y="121" width="122" height="12"/>
+                                                <rect key="frame" x="109" y="120.66666666666663" width="120.66666666666669" height="12"/>
                                                 <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="10"/>
                                                 <color key="textColor" systemColor="systemGray2Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(완료 횟수 / 목표 횟수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gj-WD-4tt">
-                                                <rect key="frame" x="62" y="209.99999999999994" width="90" height="12"/>
+                                                <rect key="frame" x="62" y="209.33333333333331" width="89" height="12"/>
                                                 <fontDescription key="fontDescription" name="Sansation-Regular" family="Sansation" pointSize="10"/>
                                                 <color key="textColor" systemColor="systemGray2Color"/>
                                                 <nil key="highlightedColor"/>
@@ -530,7 +530,6 @@
                                             <constraint firstItem="Ft8-Az-P6r" firstAttribute="top" secondItem="TTs-tg-0fB" secondAttribute="bottom" constant="3" id="WJI-uR-TSC"/>
                                             <constraint firstItem="2gj-WD-4tt" firstAttribute="leading" secondItem="nCT-kP-u60" secondAttribute="trailing" constant="3" id="YnG-in-if2"/>
                                             <constraint firstItem="2qg-Po-hgb" firstAttribute="top" secondItem="3Oo-f7-Yvd" secondAttribute="bottom" constant="3" id="Z4s-Lw-tF8"/>
-                                            <constraint firstAttribute="width" constant="273" id="aIZ-hx-pUU"/>
                                             <constraint firstAttribute="trailing" secondItem="NhS-y1-aYA" secondAttribute="trailing" constant="42" id="bFl-ID-oqM"/>
                                             <constraint firstItem="TTs-tg-0fB" firstAttribute="top" secondItem="2qg-Po-hgb" secondAttribute="bottom" constant="35" id="fz9-bd-V1t"/>
                                             <constraint firstItem="3Oo-f7-Yvd" firstAttribute="top" secondItem="aA3-hh-mxK" secondAttribute="top" constant="27" id="fzw-Rc-3Tv"/>
@@ -565,7 +564,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rl4-HW-7Fm">
-                                <rect key="frame" x="96" y="79" width="200" height="200"/>
+                                <rect key="frame" x="96.666666666666686" y="79" width="200" height="200"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="26K-t3-ezz"/>

@@ -23,6 +23,7 @@ struct Goal: Codable {
     var period, count: Int  // 주기, 현재까지 한 횟수
     var possibility: Int?
     var promise: String?
+    var lastDays: Int?
 
     enum CodingKeys: String, CodingKey {
         case goalID = "goalId"
