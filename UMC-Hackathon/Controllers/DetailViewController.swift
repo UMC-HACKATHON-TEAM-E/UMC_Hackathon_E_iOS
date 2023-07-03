@@ -12,15 +12,16 @@ class DetailViewController: UIViewController {
     
     
 
-    @IBOutlet weak var topView: UIView!
     @IBOutlet weak var bottomView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bottomView.backgroundColor = UIColor.gray
-        topView.setGradient(color1: UIColor(red: 0.69, green: 0.32, blue: 0.87, alpha: 1.00), color2: UIColor(red: 0.00, green: 0.48, blue: 1.00, alpha: 1.00))
         
+        self.view.setGradient(color1: UIColor(red: 0.69, green: 0.32, blue: 0.87, alpha: 1.00), color2: UIColor(red: 0.00, green: 0.48, blue: 1.00, alpha: 1.00))
+        
+        bottomView.backgroundColor = UIColor.white
+        self.view.bringSubviewToFront(bottomView)
     }
 
 

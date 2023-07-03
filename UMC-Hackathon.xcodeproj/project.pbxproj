@@ -22,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		480010322A530E4C00BA29DD /* Sansation_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sansation_Regular.ttf; sourceTree = "<group>"; };
+		480010332A530F0B00BA29DD /* Sansation_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sansation_Bold.ttf; sourceTree = "<group>"; };
 		5766682C2A52B30100A8115C /* UMC-Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-Hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5766682F2A52B30100A8115C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		576668312A52B30100A8115C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		480010312A530E3700BA29DD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				480010322A530E4C00BA29DD /* Sansation_Regular.ttf */,
+				480010332A530F0B00BA29DD /* Sansation_Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		576668232A52B30100A8115C = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +79,7 @@
 		5766682E2A52B30100A8115C /* UMC-Hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				480010312A530E3700BA29DD /* Fonts */,
 				5766684A2A52DE7B00A8115C /* App */,
 				576668472A52DA4F00A8115C /* Views */,
 				576668462A52D6B200A8115C /* Controllers */,
