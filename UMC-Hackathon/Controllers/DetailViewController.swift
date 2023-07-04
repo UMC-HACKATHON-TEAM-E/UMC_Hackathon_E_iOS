@@ -18,6 +18,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var bottomView: UIView!
     
+    @IBOutlet weak var TitleText: UILabel!
     //그래프 들어가는 뷰
     @IBOutlet weak var middleView: UIView!
     
@@ -162,6 +163,8 @@ class DetailViewController: UIViewController {
         Firstprobability.text = String(Int(result2 * 100)) + "%"
         
         secondProbability.text = String(resultPlaying) + "%"
+        
+        TitleText.text = "백준 꾸준히 풀기"
         
        
     }

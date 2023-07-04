@@ -440,8 +440,8 @@
                                         <color key="textColor" systemColor="systemGray2Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="헬스장가기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JY3-v1-WOj">
-                                        <rect key="frame" x="164" y="140.66666666666669" width="65" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="백준문제풀기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JY3-v1-WOj">
+                                        <rect key="frame" x="157.66666666666666" y="140.66666666666669" width="78" height="17"/>
                                         <fontDescription key="fontDescription" name="Sansation-Bold" family="Sansation" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -555,13 +555,13 @@
                                     <constraint firstItem="aUe-Cz-vWY" firstAttribute="top" secondItem="JY3-v1-WOj" secondAttribute="bottom" constant="5" id="FiM-z8-kaf"/>
                                     <constraint firstItem="JY3-v1-WOj" firstAttribute="top" secondItem="Kel-8K-0mE" secondAttribute="bottom" constant="10" id="PIy-pK-IBs"/>
                                     <constraint firstItem="Xs4-ti-jId" firstAttribute="top" secondItem="75M-0p-yqe" secondAttribute="top" constant="85" id="QqA-s2-d8I"/>
-                                    <constraint firstItem="JY3-v1-WOj" firstAttribute="leading" secondItem="75M-0p-yqe" secondAttribute="leading" constant="164" id="T4t-bf-dGQ"/>
                                     <constraint firstItem="Kel-8K-0mE" firstAttribute="top" secondItem="Xs4-ti-jId" secondAttribute="bottom" constant="5" id="aBD-jr-Xtz"/>
                                     <constraint firstItem="Xs4-ti-jId" firstAttribute="leading" secondItem="75M-0p-yqe" secondAttribute="leading" constant="182" id="cIg-dt-Bgs"/>
                                     <constraint firstItem="aA3-hh-mxK" firstAttribute="leading" secondItem="75M-0p-yqe" secondAttribute="leading" constant="50" id="fnO-kY-FTM"/>
                                     <constraint firstAttribute="trailing" secondItem="Xs4-ti-jId" secondAttribute="trailing" constant="182" id="hoZ-8c-U5e"/>
                                     <constraint firstItem="Kel-8K-0mE" firstAttribute="leading" secondItem="75M-0p-yqe" secondAttribute="leading" constant="122" id="mgl-pP-0Dx"/>
                                     <constraint firstItem="aUe-Cz-vWY" firstAttribute="centerX" secondItem="75M-0p-yqe" secondAttribute="centerX" id="omq-Xl-XH1"/>
+                                    <constraint firstItem="JY3-v1-WOj" firstAttribute="centerX" secondItem="75M-0p-yqe" secondAttribute="centerX" id="t9S-7o-wtm"/>
                                     <constraint firstAttribute="trailing" secondItem="aA3-hh-mxK" secondAttribute="trailing" constant="50" id="uC0-jn-peZ"/>
                                 </constraints>
                             </view>
@@ -590,6 +590,7 @@
                     <connections>
                         <outlet property="Firstprobability" destination="Ft8-Az-P6r" id="xcb-lo-mPc"/>
                         <outlet property="InformationVIew" destination="aA3-hh-mxK" id="fKF-ab-Ltc"/>
+                        <outlet property="TitleText" destination="Kel-8K-0mE" id="BBm-Hl-Vda"/>
                         <outlet property="bottomView" destination="75M-0p-yqe" id="pdb-cy-X2l"/>
                         <outlet property="currentNum" destination="2qg-Po-hgb" id="oFy-zN-OKg"/>
                         <outlet property="dateLabel" destination="aUe-Cz-vWY" id="dSE-Lc-jR8"/>
